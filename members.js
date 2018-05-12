@@ -38,22 +38,21 @@ var members = [ishimori,imaizumi,uemura,oseki,oda,koike,kobayashi,
   // document.write("</table>");
 
 
-
-  for(var i = members.length - 1; i > 0; i--){
-    var r = Math.floor(Math.random() * (i + 1));
-    var tmp = members[i];
-    members[i] = members[r];
-    members[r] = tmp;
+for(var i = members.length - 1; i > 0; i--){
+  var r = Math.floor(Math.random() * (i + 1));
+  var tmp = members[i];
+  members[i] = members[r];
+  members[r] = tmp;
+}
+document.write("<table>");
+document.write("<tr>");
+for (var i = 0; i < 3; i++) {
+  for (var j = 0; j < 7; j++) {
+    // console.log(members[0][0]);
+    document.write(`<td id="member_check"><img src="${members[0][1]}">`);
+    document.write(`${members[0][0]}</td>`);
+    members.shift();
   }
-  document.write("<table>");
-  document.write("<tr>");
-  for (var i = 0; i < 3; i++) {
-    for (var j = 0; j < 7; j++) {
-      // console.log(members[0][0]);
-      document.write(`<td id="member_check"><img src="${members[0][1]}">`);
-      document.write(`${members[0][0]}</td>`);
-      members.shift();
-    }
-    document.write("</tr>");
-  }
-  document.write("</table>");
+  document.write("</tr>");
+}
+document.write("</table>");
