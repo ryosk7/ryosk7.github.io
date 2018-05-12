@@ -55,12 +55,12 @@ table td img {
   z-index: -1;
 }
 #firstcontent {
-  background-color: black;
+
 }
 #keyaki-logo{
   color: white;
   z-index: -1;
-  font-size: 118px;
+  font-size: 98px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -73,4 +73,28 @@ table td img {
   top: 0;
   left: 0;
   font-family: "Nico Moji";
+}
+h1 {
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+  font-size: 70px;
+  font-family: Arial;
+}
+
+@-webkit-keyframes hue {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+
+    to {
+      -webkit-filter: hue-rotate(360deg);
+    }
+}
+
+
+#gradient
+{
 }
