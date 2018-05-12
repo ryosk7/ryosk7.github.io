@@ -80,6 +80,8 @@ table td img {
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
+  box-shadow: 0px 0px 0px 10px rgba(172,53,130,0.2),
+              0px 0px 0px 35px rgba(123,50,196,0.2);
 }
 #video-background,
 #video-overlay {
@@ -109,7 +111,6 @@ table td img {
   left: 50%;
 }
 #techi-co{
-  color: white;
   z-index: -1;
   font-size: 118px;
   position: absolute;
@@ -125,6 +126,15 @@ h1 {
     -webkit-animation: hue 60s infinite linear;
   font-size: 70px;
   font-family: Arial;
+}
+p {
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+    font-weight: bold;
+    font-family: Arial;
 }
 
 @-webkit-keyframes hue {

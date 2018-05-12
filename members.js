@@ -50,7 +50,7 @@ for (var i = 0; i < 3; i++) {
   for (var j = 0; j < 7; j++) {
     // console.log(members[0][0]);
     document.write(`<td id="member_check"><img src="${members[0][1]}">`);
-    document.write(`${members[0][0]}</td>`);
+    document.write(`<p>${members[0][0]}</P></td>`);
     members.shift();
   }
   document.write("</tr>");
