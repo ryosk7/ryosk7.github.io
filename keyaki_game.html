@@ -82,6 +82,13 @@
                     saito,sato,shida,sugai,suzumoto,nagasawa,nagahama,
                     habu,harada,hirate,moriya,yoneteni,rika,risa];
 
+      for(var i = members.length - 1; i > 0; i--){
+        var r = Math.floor(Math.random() * (i + 1));
+        var tmp = members[i];
+        members[i] = members[r];
+        members[r] = tmp;
+      }
+
       for (var i = 0; i < 3; i++) {
         for (var j = 0; j < 7; j++) {
           console.log(members[0][0]);
