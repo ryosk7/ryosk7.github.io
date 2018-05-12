@@ -5,5 +5,5 @@ $(function(){
     $.each(thum,function(i){
       thum.eq(i).delay(i*interval).animate({'opacity':'1'},900,'swing');
     });
-  },4000);
+  },8000);
 });

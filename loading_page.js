@@ -6,9 +6,9 @@ $(function(){
   keyakiLogo.hide().fadeIn(800, function(){
     setTimeout(function() {
       keyakiLogo.fadeOut(600);
-    }, 2000);
+    }, 4000);
   });
   setTimeout(function(){
     secondCon.fadeIn(600);
-  }, 3400);
+  }, 6800);
 });
