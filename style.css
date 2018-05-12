@@ -1,0 +1,57 @@
+html,body{
+  hight: 100%;    /*高さを100％に設定*/
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  positiion: relative;
+  min-width: 600px;   /*中央配置するボックスの横幅*/
+  min-height: 400px;  /*中央配置するボックスの縦幅*/
+}
+
+table {
+  margin: -200px 0 0 -530px;  /*縦横半分をネガティブマージンでずらす*/
+  position: absolute;     /*body要素に対して絶対配置*/
+  top: 50%;       /*上端を中央に*/
+  left: 50%;      /*左端を中央に*/
+  width: 600px;   /*横幅*/
+  height: 400px;  /*縦幅*/
+}
+table td {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+table td img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#video-background,
+#video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 130%;
+  width: auto;
+  height: auto;
+}
+#video-background {
+  z-index: -2;
+}
+#video-overlay {
+  z-index: -1;
+}
+#firstcontent {
+  background-color: black;
+}
+#keyaki-logo{
+  color: white;
+  z-index: -1;
+  text-align: center;
+  margin-top: 23%;
+  font-size: 118px;
+}
