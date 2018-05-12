@@ -3,11 +3,19 @@ html,body{
 }
 
 body{
+
+}
+
+.wrap {
   margin: 0;
   padding: 0;
   positiion: relative;
   min-width: 600px;   /*中央配置するボックスの横幅*/
   min-height: 400px;  /*中央配置するボックスの縦幅*/
+}
+
+  a{
+  text-decoration: none;
 }
 
 table {
@@ -51,7 +59,17 @@ table td img {
 #keyaki-logo{
   color: white;
   z-index: -1;
-  text-align: center;
-  margin-top: 23%;
   font-size: 118px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+#techi-co{
+  color: white;
+  z-index: -1;
+  font-size: 118px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Nico Moji";
 }
