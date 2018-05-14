@@ -24,91 +24,72 @@ var members = [ishimori,imaizumi,uemura,oseki,oda,koike,kobayashi,
               saito,sato,shida,sugai,suzumoto,nagasawa,nagahama,
               habu,harada,hirate,moriya,yoneteni,rika,risa];
 
-var s_members = [ishimori,imaizumi,uemura,oseki,oda,koike,kobayashi,
-              saito,sato,shida,sugai,suzumoto,nagasawa,nagahama,
-              habu,harada,hirate,moriya,yoneteni,rika,risa];
 
-  // document.write("<table>");
-  // document.write("<tr>");
-  // for (var i = 0; i < 3; i++) {
-  //   for (var j = 0; j < 7; j++) {
-  //     // console.log(members[0][0]);
-  //     document.write(`<td id="member_check"><img src="${members[0][1]}">`);
-  //     document.write(`${members[0][0]}</td>`);
-  //     members.shift();
-  //   }
-  //   document.write("</tr>");
-  // }
-  // document.write("</table>");
+var btn = document.querySelector('input');
+var txt = document.querySelector('p');
 
-
-  for(var i = s_members.length - 1; i > 0; i--){
-    var r = Math.floor(Math.random() * (i + 1));
-    var tmp = s_members[i];
-    s_members[i] = s_members[r];
-    s_members[r] = tmp;
-  }
-
-
-  function dispImg(src){
-    document.write("<td id='member_check'><img src='" + src + "'>");
-  }
-
-  function dispName(name){
-    document.write("<p>" + name + "</P></td>");
-  }
-
-document.write("<table id='list_member_all'>");
-document.write("<tr>");
-for (var i = 0; i < 3; i++) {
-  for (var j = 0; j < 7; j++) {
-    // document.write(`<td id="member_check"><img src='${members[0][1]}'>`);
-    // document.write(`<p>${members[0][0]}</P></td>`);
-
-    dispImg(members[0][1]);
-    dispName(members[0][0]);
-    members.shift();
-
-    // var btn = document.querySelector('input');
-    // btn.addEventListener('click', updateBtn);
-    //
-    // function updateBtn() {
-    //   if (btn.value === 'on') {
-    //     dispImg(s_members[0][1]);
-    //     dispName(s_members[0][0]);
-    //     s_members.shift();
-    //   }
-    // }
-
-    $value = "on";
-
-    document.addEventListener("input", function(){
-      document.getElementByClass('click-button').addEventListener('click', function(){
-        if(value == "on"){
-          dispImg(s_members[0][1]);
-          dispName(s_members[0][0]);
-          s_members.shift();
-        }
-      });
-    }, false);
-
-
-
-    // if (s == 1) {
-    //   dispImg(s_members[0][1]);
-    //   dispName(s_members[0][0]);
-    //   s_members.shift();
-    // }else {
-    //   dispImg(members[0][1]);
-    //   dispName(members[0][0]);
-    //   members.shift();
-    // }
-  }
-  document.write("</tr>");
+btn.addEventListener('click', updateBtn);
+for(var i = members.length - 1; i > 0; i--){
+  var r = Math.floor(Math.random() * (i + 1));
+  var tmp = members[i];
+  members[i] = members[r];
+  members[r] = tmp;
 }
-document.write("</table>");
+
+function dispName(name){
+  document.write("<td><p>"+name+"|</P></td>");
+}
+
+function updateBtn() {
+  if (btn.value === 'マシンを起動') {
+    btn.value = 'マシンを停止';
+    document.write("<table id='list_member_all'>");
+    document.write("<tr>");
+    for (var i = 0; i < 3; i++) {
+      for (var j = 0; j < 7; j++) {
+        function updateBtn() {
+          dispName(members[0][0]);
+          members.shift();
+          if (btn.value === 'マシンを起動') {
+            btn.value = 'マシンを停止'
+          }
+        }
+      }
+    document.write("</tr>");
+    }
+    document.write("</table>");
+
+  } else {
+    for (var i = 0; i < 3; i++) {
+      for (var j = 0; j < 7; j++) {
+        function updateBtn() {
+          dispName(members[0][0]);
+          members.shift();
+          if (btn.value === 'マシンを停止') {
+            btn.value = 'マシンを起動';
+          }
+        }
+      }
+    document.write("</tr>");
+    }
+    document.write("</table>");
+  }
+}
 
 
-
-// btn.addEventListener('click', updateBtn);
 //
+// document.write("<table id='list_member_all'>");
+// document.write("<tr>");
+// for (var i = 0; i < 3; i++) {
+//   for (var j = 0; j < 7; j++) {
+//     dispName(members[0][0]);
+//     function updateBtn() {
+//       if (btn.value === dispName(members[0][0])) {
+//         dispName(members[0][0]);
+//         members.shift();
+//       }
+//     }
+//   }
+// document.write("</tr>");
+// }
+// document.write("</table>");
